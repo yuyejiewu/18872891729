@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: hello-demo
+  profiles:
+    active: uat
+book:
+  name: spring cloud 微服务实战
+  author: 翟永超
