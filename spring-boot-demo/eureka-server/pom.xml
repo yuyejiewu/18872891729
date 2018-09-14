@@ -9,20 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <artifactId>eureka-server</artifactId>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
-            <version>1.4.5.RELEASE</version>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
         </dependency>
     </dependencies>
-
-    <artifactId>hello-demo</artifactId>
-    <groupId>com.didispace</groupId>
-    <packaging>jar</packaging>
-    <name>hello-demo</name>
-
-
-
 
 </project>
