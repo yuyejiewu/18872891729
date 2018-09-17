@@ -11,6 +11,7 @@
     <modules>
         <module>hello-demo</module>
         <module>eureka-server</module>
+        <module>ribbon-consumer</module>
     </modules>
 
     <parent>
