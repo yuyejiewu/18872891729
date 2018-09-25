@@ -17,13 +17,13 @@ public class HelloService {
     @HystrixCommand(fallbackMethod = "helloFallback", commandKey = "helloKey")
     public String helloService(){
         long start = System.currentTimeMillis();
-        ResponseEntity<String> forEntity = restTemplate.getForEntity("http://hello-demo/bookInfo/getBookName", String.class);
+        ResponseEntity<String> forEntity = restTemplate.getForEntity("http://hello-demo/bookInfo/getBookAuthor", String.class);
         long end = System.currentTimeMillis();
         log.info("end - start = {}", end - start);
         return forEntity.getBody();
     }
 
     public String helloFallback(){
-        return "error";
+        return "服务调用错误";
     }
 }
