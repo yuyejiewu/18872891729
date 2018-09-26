@@ -9,34 +9,31 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.luow.life</groupId>
+    <artifactId>com-conmmon</artifactId>
+    <version>10.1.5</version>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
-            <version>1.4.5.RELEASE</version>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>maven-lombok-plugin</artifactId>
             <version>0.9.3.1</version>
         </dependency>
-        <dependency>
-            <groupId>com.luow.life</groupId>
-            <artifactId>com-conmmon</artifactId>
-            <version>10.1.5</version>
-        </dependency>
     </dependencies>
 
-    <artifactId>hello-demo</artifactId>
-    <groupId>com.didispace</groupId>
-    <packaging>jar</packaging>
-    <name>hello-demo</name>
-
-
-
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
