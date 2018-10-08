@@ -28,6 +28,12 @@
             <groupId>com.luow.life</groupId>
             <artifactId>com-conmmon</artifactId>
             <version>10.1.5</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.luow.life</groupId>
+            <artifactId>hello-service-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

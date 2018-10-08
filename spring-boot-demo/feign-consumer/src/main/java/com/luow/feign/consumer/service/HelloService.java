@@ -8,9 +8,9 @@ import com.luow.life.conmmon.model.User;
 public interface HelloService {
 
     @RequestMapping("hello/index")
-    String hello();
+    String hello(com.luow.didispace.model.User 张健);
 
-    @RequestMapping("bookInfo/getBookName")
+    @RequestMapping(value = "bookInfo/getBookName", method = RequestMethod.GET)
     String getBookName();
 
     @RequestMapping(value = "hello/hello", method = RequestMethod.GET)
