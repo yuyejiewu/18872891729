@@ -1,8 +1,11 @@
 package com.luow.life.common.test;
 
+import com.luow.life.conmmon.model.Person;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
@@ -12,6 +15,22 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
 public class TestBlockingNIO {
+
+    @Test
+    public void testClass() throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
+        String className = "com.luow.life.conmmon.model.Person";
+        Class<?> aClass = Class.forName(className);
+//        System.out.println(aClass.toString());
+        Object o = aClass.newInstance();
+        Method[] methods = aClass.getMethods();
+        Method setAge = aClass.getMethod("setAge", int.class);
+        setAge.invoke(o,1);
+        System.out.println(setAge);
+        /*for (Method method : methods) {
+            System.out.println(method.getName());
+        }*/
+
+    }
 
     /**
      * 客户端
